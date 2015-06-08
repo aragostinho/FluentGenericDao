@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentGenericDao.TaskConsole", "FluentGenericDao.Console\FluentGenericDao.TaskConsole.csproj", "{547D596F-2DE9-4A47-BAEF-1EA7A724316C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentGenericDao.Domain", "FluentGenericDao.Domain\FluentGenericDao.Domain.csproj", "{0058DC48-9747-4A80-941E-B02FED3FA74C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentGenericDao.Repository", "FluentGenericDao.Repository\FluentGenericDao.Repository.csproj", "{54AD0F82-69E8-41E2-8996-23753224FAC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentGenericDao.Business", "FluentGenericDao.Business\FluentGenericDao.Business.csproj", "{6D74151D-203F-4A59-B586-D9BF6A7B2855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentGenericDao.Util", "FluentGenericDao.Util\FluentGenericDao.Util.csproj", "{0A11B01B-E7CE-4DA5-AF3B-031BC41ED32C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{547D596F-2DE9-4A47-BAEF-1EA7A724316C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547D596F-2DE9-4A47-BAEF-1EA7A724316C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547D596F-2DE9-4A47-BAEF-1EA7A724316C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{547D596F-2DE9-4A47-BAEF-1EA7A724316C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0058DC48-9747-4A80-941E-B02FED3FA74C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0058DC48-9747-4A80-941E-B02FED3FA74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0058DC48-9747-4A80-941E-B02FED3FA74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0058DC48-9747-4A80-941E-B02FED3FA74C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54AD0F82-69E8-41E2-8996-23753224FAC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54AD0F82-69E8-41E2-8996-23753224FAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54AD0F82-69E8-41E2-8996-23753224FAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54AD0F82-69E8-41E2-8996-23753224FAC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D74151D-203F-4A59-B586-D9BF6A7B2855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D74151D-203F-4A59-B586-D9BF6A7B2855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D74151D-203F-4A59-B586-D9BF6A7B2855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D74151D-203F-4A59-B586-D9BF6A7B2855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A11B01B-E7CE-4DA5-AF3B-031BC41ED32C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A11B01B-E7CE-4DA5-AF3B-031BC41ED32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A11B01B-E7CE-4DA5-AF3B-031BC41ED32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A11B01B-E7CE-4DA5-AF3B-031BC41ED32C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
