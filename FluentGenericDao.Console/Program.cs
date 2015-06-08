@@ -35,6 +35,7 @@ namespace FluentGenericDao.TaskConsole
                 Console.WriteLine("====================================================");
                 Console.WriteLine("============= PROCESSS HAS BEEN FINISHED=============");
                 Console.WriteLine("====================================================");
+                Console.ReadKey();
 
             }
             catch (Exception oException)
