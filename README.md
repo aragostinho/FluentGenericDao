@@ -1,2 +1,6 @@
 # FluentGenericDao
-FluentGenericDao
+
+
+A simple console application for a hypothetical task list using Fluent NHibernate and Design Patterns like GenericDao, Factory and others.
+
+Enjoy it :)
