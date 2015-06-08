@@ -11,7 +11,7 @@ namespace FluentGenericDao.TaskConsole.Task
     {
         public override string Description()
         {
-            return "Informe o nome da tarefa e o nome do responsável";
+            return "Add a new task";
         }
         public override void Execute(string[] args)
         {
