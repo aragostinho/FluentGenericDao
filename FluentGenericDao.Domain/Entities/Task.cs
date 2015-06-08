@@ -8,12 +8,9 @@ namespace FluentGenericDao.Domain.Entities
 {
     public class Task
     {
-
         public virtual int Id { get; set; }
         public virtual string Description { get; set; }
         public virtual bool IsDone { get; set; }
         public virtual Responsible Responsible { get; set; }
-
-
     }
 }

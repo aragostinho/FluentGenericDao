@@ -57,10 +57,5 @@ namespace FluentGenericDao.TaskConsole
 
             return hasArguments ? args[0] : Console.ReadLine();
         }
-
-
-
-
-
     }
 }
