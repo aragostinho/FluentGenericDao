@@ -21,7 +21,7 @@ namespace FluentGenericDao.TaskConsole.Task
                 FluentGenericDao.Domain.Entities.Task oTask = new FluentGenericDao.Domain.Entities.Task();
                 oTask.Id = 1;
                 oTask.Responsible = new Responsible() { Name = "Carlos Augusto" };
-                //BusinessFactory.Task.Add(oTask);
+                BusinessFactory.Task.Add(oTask);
             
             }
             catch (Exception)

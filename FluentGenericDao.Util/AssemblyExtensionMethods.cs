@@ -11,13 +11,8 @@ namespace System
     {
         public static Assembly GetAssembly(this String typeName)
         {
-            foreach (Assembly currentassembly in AppDomain.CurrentDomain.GetAssemblies())
-            {
-                Type t = currentassembly.GetType(typeName, false, true);
-                if (t != null) { return currentassembly; }
-            }
-
-            return null;
+            Assembly _assemnbly = AppDomain.CurrentDomain.GetAssemblies().Where(p => p.FullName.Contains(typeName)).FirstOrDefault();
+            return _assemnbly;
         }
 
     }

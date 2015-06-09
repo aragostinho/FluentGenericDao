@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentNHibernate.Cfg.Db;
 using NHibernate.Tool.hbm2ddl;
+using System.Reflection;
 
 namespace FluentGenericDao.Repository
 {
@@ -27,7 +28,7 @@ namespace FluentGenericDao.Repository
 
         private static ISessionFactory InitializeSessionFactory(System.Reflection.Assembly pAssembly)
         {
-
+      
             _ISessionFactory = Fluently.Configure()
                 .Database(MySQLConfiguration.Standard.ConnectionString(ConfigurationManager.AppSettings["MySqlConnectionString"]))
                 .Mappings(x => x.FluentMappings.AddFromAssembly(pAssembly))
