@@ -19,7 +19,7 @@ namespace FluentGenericDao.TaskConsole.Task
             try
             {
                 FluentGenericDao.Domain.Entities.Task oTask = new FluentGenericDao.Domain.Entities.Task();
-                oTask.Id = 1;
+                oTask.Description = "Test";
                 oTask.Responsible = new Responsible() { Name = "Carlos Augusto" };
                 BusinessFactory.Task.Add(oTask);
             

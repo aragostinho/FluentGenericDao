@@ -33,7 +33,7 @@ namespace FluentGenericDao.Repository
             _ISessionFactory = Fluently.Configure()
                 .Database(MySQLConfiguration.Standard.ConnectionString(connectionString))
                 .Mappings(x => x.FluentMappings.AddFromAssembly(pAssembly))
-                .ExposeConfiguration(cfg => new SchemaExport(cfg).Execute(true, true, true))
+                .ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(true, true))
                 .BuildSessionFactory();
 
             return _ISessionFactory;
