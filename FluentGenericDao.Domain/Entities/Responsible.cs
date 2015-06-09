@@ -10,5 +10,7 @@ namespace FluentGenericDao.Domain.Entities
     {
         public virtual int Id { get; set; }
         public virtual string Name { get; set; }
+
+        public virtual IList<Task> Task { get; set; }
     }
 }

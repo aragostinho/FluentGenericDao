@@ -28,11 +28,12 @@ namespace FluentGenericDao.Repository
 
         private static ISessionFactory InitializeSessionFactory(System.Reflection.Assembly pAssembly)
         {
+            string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnectionString"].ConnectionString;
       
             _ISessionFactory = Fluently.Configure()
-                .Database(MySQLConfiguration.Standard.ConnectionString(ConfigurationManager.AppSettings["MySqlConnectionString"]))
+                .Database(MySQLConfiguration.Standard.ConnectionString(connectionString))
                 .Mappings(x => x.FluentMappings.AddFromAssembly(pAssembly))
-                .ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(true, true))
+                .ExposeConfiguration(cfg => new SchemaExport(cfg).Execute(true, true, true))
                 .BuildSessionFactory();
 
             return _ISessionFactory;

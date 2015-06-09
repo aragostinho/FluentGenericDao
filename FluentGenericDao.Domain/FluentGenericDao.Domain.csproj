@@ -52,6 +52,7 @@
     <Compile Include="Entities\Responsible.cs" />
     <Compile Include="Entities\Task.cs" />
     <Compile Include="Entities\TaskList.cs" />
+    <Compile Include="Mappings\ResponsibleMap.cs" />
     <Compile Include="Mappings\TaskMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -3,20 +3,18 @@ using FluentNHibernate.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text; 
+using System.Text;
+using System.Threading.Tasks;
 
 namespace FluentGenericDao.Domain.Mappings
 {
-    public class TaskMap : ClassMap<Task>
+    public class ResponsibleMap : ClassMap<Responsible>
     {
-
-        public TaskMap()
+        public ResponsibleMap()
         {
             Id(x => x.Id).GeneratedBy.Identity();
-            Map(x => x.Description).Length(100);
-            Map(x => x.IsDone).Default("0");
-            References(x => x.Responsible,"ResponsibleId").Cascade.None();
+            Map(x=> x.Name);
+            HasMany(x => x.Task).KeyColumn("ResponsibleId").Inverse().Cascade.All();
         }
-
     }
 }
