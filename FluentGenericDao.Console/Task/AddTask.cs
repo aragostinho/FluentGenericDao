@@ -18,9 +18,12 @@ namespace FluentGenericDao.TaskConsole.Task
 
             try
             {
+                FluentGenericDao.Domain.Entities.Responsible Responsible = new Domain.Entities.Responsible() { Name = "Carlos Augusto" };
+                BusinessFactory.Responsible.Add(Responsible);
+
                 FluentGenericDao.Domain.Entities.Task oTask = new FluentGenericDao.Domain.Entities.Task();
-                oTask.Description = "Test";
-                oTask.Responsible = new Responsible() { Name = "Carlos Augusto" };
+                oTask.Description = "Testing Task";
+                oTask.Responsible = Responsible;
                 BusinessFactory.Task.Add(oTask);
             
             }

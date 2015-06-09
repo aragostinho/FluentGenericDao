@@ -14,7 +14,7 @@ namespace FluentGenericDao.Domain.Mappings
         {
             Id(x => x.Id).GeneratedBy.Identity();
             Map(x=> x.Name);
-            HasMany(x => x.Task).KeyColumn("ResponsibleId").Inverse().Cascade.All();
+            HasMany(x => x.Task).KeyColumn("ResponsibleId");
         }
     }
 }

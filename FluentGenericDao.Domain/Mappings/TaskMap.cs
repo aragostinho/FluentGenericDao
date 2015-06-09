@@ -15,7 +15,7 @@ namespace FluentGenericDao.Domain.Mappings
             Id(x => x.Id).GeneratedBy.Identity();
             Map(x => x.Description).Length(100);
             Map(x => x.IsDone).Default("0");
-            References(x => x.Responsible,"ResponsibleId").Cascade.None();
+            References(x => x.Responsible,"ResponsibleId").Nullable();
         }
 
     }

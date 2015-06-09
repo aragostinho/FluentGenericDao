@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 
 
@@ -12,7 +13,6 @@ namespace FluentGenericDao.TaskConsole
         public static Dictionary<int, AbstractInterpreter> _ActionList;
         static void Main(string[] args)
         {
-
             int _intOption = 1;
             _ActionList = new Dictionary<int, AbstractInterpreter>();
             _ActionList.Add(1, TaskFactory.AddTask);

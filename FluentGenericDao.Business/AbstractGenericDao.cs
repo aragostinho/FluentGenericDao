@@ -14,7 +14,6 @@ namespace FluentGenericDao.Business
 
         protected ISession Session
         {
-
             get
             {
                 return FluentNHibernateHelper.SessionFactory(ConfigurationManager.AppSettings["AssemblyMappings"].ToString().GetAssembly()).OpenSession();
@@ -29,30 +28,44 @@ namespace FluentGenericDao.Business
             if (Session == null)
                 throw new Exception("Não foi possível conectar no banco de dados");
 
-            try
+            using (ITransaction tran = Session.BeginTransaction())
             {
-                if (!isUsingTransaction)
-                    Session.BeginTransaction();
-
-                Session.Save(pObject);
-
-                if (!isUsingTransaction)
-                    Session.Transaction.Commit();
+                try
+                {
+                    Session.Save(pObject);
+                    tran.Commit();
+                }
+                catch(Exception ex)
+                {
+                    tran.Rollback();
+                }
 
             }
-            catch (Exception oException)
-            {
 
-                if (!isUsingTransaction)
-                    Session.Transaction.Rollback();
+            //try
+            //{
+            //    if (!isUsingTransaction)
+            //        Session.BeginTransaction();
 
-                throw oException;
-            }
-            finally
-            {
-                if (!isUsingTransaction)
-                    Session.Transaction.Commit();
-            }
+            //    Session.Save(pObject);
+
+            //    if (!isUsingTransaction)
+            //        Session.Transaction.Commit();
+
+            //}
+            //catch (Exception oException)
+            //{
+
+            //    if (!isUsingTransaction)
+            //        Session.Transaction.Rollback();
+
+            //    throw oException;
+            //}
+            //finally
+            //{
+            //    if (!isUsingTransaction)
+            //        Session.Transaction.Commit();
+            //}
 
         }
 

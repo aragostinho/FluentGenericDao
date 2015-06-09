@@ -19,6 +19,14 @@ namespace FluentGenericDao.Business
             return _IBTask;
         } }
 
+        private static IBResponsible<Responsible> _IBResponsible;
 
+        public static IBResponsible<Responsible> Responsible { get {
+
+            if (_IBResponsible == null)
+                _IBResponsible = new BResponsible();
+
+            return _IBResponsible;
+        } }
     }
 }
