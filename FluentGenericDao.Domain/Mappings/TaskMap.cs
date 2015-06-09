@@ -12,7 +12,7 @@ namespace FluentGenericDao.Domain.Mappings
 
         public TaskMap()
         {
-            Id(x => x.Id);
+            Id(x => x.Id).GeneratedBy.Identity();
             Map(x => x.Description).Length(100);
             Map(x => x.IsDone).Default("0");
             References(x => x.Responsible).Cascade.All();
