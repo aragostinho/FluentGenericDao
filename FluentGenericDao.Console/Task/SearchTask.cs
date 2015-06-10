@@ -18,9 +18,11 @@ namespace FluentGenericDao.TaskConsole.Task
 
             foreach (var item in list.ToList())
 	        {
-                Console.WriteLine("=====================================================================");
+                Console.WriteLine("==========================================================");
+
 		        Console.WriteLine("Task Id: {0}, Task Name: {1}", item.Id, item.Description);
-                Console.WriteLine("=====================================================================");
+
+                Console.WriteLine("==========================================================");
 	        }
         }
 
