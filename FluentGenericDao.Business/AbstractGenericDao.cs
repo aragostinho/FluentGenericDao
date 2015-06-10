@@ -9,7 +9,7 @@ using System.Configuration;
 
 namespace FluentGenericDao.Business
 {
-    public abstract class AbstractGenericDao<T> : IGenericDao<T>
+    public abstract class AbstractGenericDao<T> : IGenericDao<T> where T : class
     {
 
         protected ISession Session
@@ -23,7 +23,7 @@ namespace FluentGenericDao.Business
 
 
 
-        public virtual void Add(T pObject, bool isUsingTransaction = false)
+        public virtual void Add(T pObject)
         {
             if (Session == null)
                 throw new Exception("Não foi possível conectar no banco de dados");
@@ -35,37 +35,14 @@ namespace FluentGenericDao.Business
                     Session.Save(pObject);
                     tran.Commit();
                 }
-                catch(Exception ex)
+                catch(Exception)
                 {
                     tran.Rollback();
                 }
 
             }
 
-            //try
-            //{
-            //    if (!isUsingTransaction)
-            //        Session.BeginTransaction();
-
-            //    Session.Save(pObject);
-
-            //    if (!isUsingTransaction)
-            //        Session.Transaction.Commit();
-
-            //}
-            //catch (Exception oException)
-            //{
-
-            //    if (!isUsingTransaction)
-            //        Session.Transaction.Rollback();
-
-            //    throw oException;
-            //}
-            //finally
-            //{
-            //    if (!isUsingTransaction)
-            //        Session.Transaction.Commit();
-            //}
+        
 
         }
 
@@ -136,14 +113,12 @@ namespace FluentGenericDao.Business
         }
 
 
-        public virtual T Get(System.Linq.Expressions.Expression pLinqExpression)
+        public virtual IEnumerable<T> Get(System.Linq.Expressions.Expression<Func<T, bool>> pLinqExpression)
         {
             if (Session == null)
                 throw new Exception("Não foi possível conectar no banco de dados");
 
-            return Session.Get<T>(pLinqExpression);
-
-
+            return Session.QueryOver<T>().Where(pLinqExpression).List<T>();
         }
          
     }

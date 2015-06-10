@@ -45,6 +45,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task\AddTask.cs" />
+    <Compile Include="Task\ListResponsible.cs" />
     <Compile Include="Task\TaskFactory.cs" />
   </ItemGroup>
   <ItemGroup>

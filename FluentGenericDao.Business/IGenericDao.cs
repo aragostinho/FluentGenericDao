@@ -9,10 +9,10 @@ namespace FluentGenericDao.Business
     public interface IGenericDao<T>
     {
 
-        void Add(T pObject, bool isUsingTransaction=false);
+        void Add(T pObject);
         void Update(T pObject, bool isUsingTransaction=false);
         void Delete(T pObject, bool isUsingTransaction=false);
-        T Get(System.Linq.Expressions.Expression pLinqExpression);
+        IEnumerable<T> Get(System.Linq.Expressions.Expression<Func<T,bool>> pLinqExpression);
  
     }
 }

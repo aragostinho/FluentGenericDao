@@ -16,6 +16,7 @@ namespace FluentGenericDao.TaskConsole
             int _intOption = 1;
             _ActionList = new Dictionary<int, AbstractInterpreter>();
             _ActionList.Add(1, TaskFactory.AddTask);
+            _ActionList.Add(2, TaskFactory.ListResponsible);
 
             try
             {

@@ -18,7 +18,14 @@ namespace FluentGenericDao.TaskConsole.Tasks
             }
         }
 
-
+        private static ListResponsible _listResponsible;
+        public static ListResponsible ListResponsible
+        {
+            get
+            {
+                return _listResponsible ?? new ListResponsible();
+            }
+        }
 
     }
 }
