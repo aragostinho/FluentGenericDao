@@ -27,5 +27,14 @@ namespace FluentGenericDao.TaskConsole.Tasks
             }
         }
 
+        private static SearchTask _searchTask;
+        public static SearchTask SearchTask
+        {
+            get
+            {
+                return _searchTask ?? new SearchTask();
+            }
+        }
+
     }
 }

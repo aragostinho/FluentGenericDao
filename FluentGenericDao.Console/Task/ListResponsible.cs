@@ -12,7 +12,7 @@ namespace FluentGenericDao.TaskConsole.Task
     {
         public override void Execute(string[] args)
         {
-            IEnumerable<Responsible> responsible = BusinessFactory.Responsible.Get(x => x.Id < 10);
+            IEnumerable<Responsible> responsible = BusinessFactory.Responsible.Get(x => x.Id != 0);
             foreach (var item in responsible)
             {
                 Console.WriteLine("Responsible Name:{0}", item.Name);
@@ -21,7 +21,7 @@ namespace FluentGenericDao.TaskConsole.Task
 
         public override string Description()
         {
-            return "List responsible with criteria";
+            return "List responsible";
         }
     }
 }

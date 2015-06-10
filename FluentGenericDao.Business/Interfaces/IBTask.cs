@@ -9,6 +9,7 @@ namespace FluentGenericDao.Business.Interfaces
 {
     public interface IBTask<T> : IGenericDao<T>
     {
+        IEnumerable<Task> ListTaskName(string name);
 
     }
 }

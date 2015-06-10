@@ -39,10 +39,8 @@ namespace FluentGenericDao.Business
                 {
                     tran.Rollback();
                 }
-
+                
             }
-
-        
 
         }
 
