@@ -15,21 +15,26 @@ namespace FluentGenericDao.TaskConsole.Task
         }
         public override void Execute(string[] args)
         {
+            Console.WriteLine("Enter responsible name.");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Enter the task description.");
+            string description = Console.ReadLine();
+
 
             try
             {
-                FluentGenericDao.Domain.Entities.Responsible Responsible = new Domain.Entities.Responsible() { Name = "Carlos Augusto" };
+                FluentGenericDao.Domain.Entities.Responsible Responsible = new Domain.Entities.Responsible() { Name = name };
                 BusinessFactory.Responsible.Add(Responsible);
 
                 FluentGenericDao.Domain.Entities.Task oTask = new FluentGenericDao.Domain.Entities.Task();
-                oTask.Description = "Testing Task";
+                oTask.Description = description;
                 oTask.Responsible = Responsible;
                 BusinessFactory.Task.Add(oTask);
             
             }
             catch (Exception)
-            {
-                
+            {             
                 throw;
             }   
             
