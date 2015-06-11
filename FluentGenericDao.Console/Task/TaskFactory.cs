@@ -36,5 +36,15 @@ namespace FluentGenericDao.TaskConsole.Tasks
             }
         }
 
+        private static SeekResponsibleOfTask _seekResponsibleOfTask;
+
+        public static SeekResponsibleOfTask SeekResponsibleOfTask
+        {
+            get
+            {
+                return _seekResponsibleOfTask ?? new SeekResponsibleOfTask();
+            }
+        }
+
     }
 }

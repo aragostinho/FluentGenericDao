@@ -18,6 +18,7 @@ namespace FluentGenericDao.TaskConsole
             _ActionList.Add(1, TaskFactory.AddTask);
             _ActionList.Add(2, TaskFactory.ListResponsible);
             _ActionList.Add(3, TaskFactory.SearchTask);
+            _ActionList.Add(4, TaskFactory.SeekResponsibleOfTask);
 
             try
             {

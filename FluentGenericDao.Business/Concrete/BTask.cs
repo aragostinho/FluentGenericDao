@@ -20,5 +20,15 @@ namespace FluentGenericDao.Business.Concrete
 
             return task.List<Task>();
         }
+
+
+        public IEnumerable<Task> ListTaskResponsible(string responsible)
+        {
+            ICriteria criteria = Session.CreateCriteria<Task>();
+            ICriteria criteriaResponsible = criteria.CreateCriteria("Responsible");
+            criteriaResponsible.Add(Restrictions.Eq("Name", responsible));
+
+            return criteria.List<Task>();
+        }
     }
 }

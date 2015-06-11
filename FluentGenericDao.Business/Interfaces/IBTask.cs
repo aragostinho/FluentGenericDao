@@ -11,5 +11,6 @@ namespace FluentGenericDao.Business.Interfaces
     {
         IEnumerable<Task> ListTaskName(string name);
 
+        IEnumerable<Task> ListTaskResponsible(string responsible);
     }
 }

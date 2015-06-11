@@ -47,6 +47,7 @@
     <Compile Include="Task\AddTask.cs" />
     <Compile Include="Task\ListResponsible.cs" />
     <Compile Include="Task\SearchTask.cs" />
+    <Compile Include="Task\SeekResponsibleOfTask.cs" />
     <Compile Include="Task\TaskFactory.cs" />
   </ItemGroup>
   <ItemGroup>
